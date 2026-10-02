@@ -1,0 +1,61 @@
+# ==============================================================================
+# Terraform Gitignore
+# ==============================================================================
+
+# Local .terraform directories (plugins, modules, providers)
+**/.terraform/
+.terraform/
+.terraform.lock.hcl
+
+# Terraform State files (Contains sensitive plain-text secrets and state)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Sensitive Variables (Contain tokens, secret keys, passwords)
+*.tfvars
+*.tfvars.json
+*.pkrvars.hcl
+*.pkrvars.json
+
+# Except example files
+!*.tfvars.example
+!*.pkrvars.hcl.example
+
+# Override files (local overrides)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ==============================================================================
+# Security & Secret Credentials
+# ==============================================================================
+# Private Keys and Certificates
+*.pem
+*.key
+*.pub
+id_rsa*
+*.pfx
+*.cer
+*.crt
+
+# Environment variables
+.env
+.env.*
+.env.local
+
+# Packer build artifacts
+packer-manifest.json
+
+# ==============================================================================
+# System & IDE files
+# ==============================================================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
